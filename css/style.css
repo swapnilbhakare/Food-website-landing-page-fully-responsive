@@ -65,9 +65,7 @@ nav .branding h2 {
 .navlist li:hover a {
   text-decoration: line-through tomato 3px;
 }
-.fas {
-  color: tomato;
-  transform: scale(-1, 1);
+.cart-icon {
   display: none;
 }
 nav button {
@@ -173,7 +171,12 @@ section.container .card-wrapper .card {
     margin-bottom: 30px;
     text-transform: capitalize;
   }
+  .cart-icon {
+    display: block;
+  }
   .fas {
+    color: tomato;
+    transform: scale(-1, 1);
     color: tomato;
     transform: scale(-1, 1);
     display: inline-block;

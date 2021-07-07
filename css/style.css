@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Taviraj:wght@100;200;300;400;500;700&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+  font-family: "Taviraj", serif;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(117, 114, 114);
+}
+nav {
+  margin-top: 60px;
+  width: 300px;
+  max-width: auto;
+  margin-left: 50px;
+}
+nav .branding {
+  display: flex;
+  justify-content: space-between;
+}
+nav .branding h2 {
+  max-width: auto;
+  font-size: 2.3rem;
+  font-weight: bold;
+  width: 100px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.hamberger {
+  display: none;
+}
+.hamberger span {
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 10px;
+  background: tomato;
+}
+.hamberger span:nth-child(1) {
+  width: 40px;
+}
+.hamberger span:nth-child(3) {
+  width: 50px;
+}
+
+.navlist li {
+  margin: 3.4rem 0;
+  transition: all 0.3s ease-in-out;
+}
+.navlist li:hover a {
+  text-decoration: line-through tomato 3px;
+}
+.fas {
+  color: tomato;
+  transform: scale(-1, 1);
+  display: none;
+}
+nav button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: tomato;
+  color: #fff;
+  padding: 1.2rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+section.container {
+  display: grid;
+  margin-top: 150px;
+  margin-left: 80px;
+  gap: 20px;
+}
+section.container .title {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+section.container .text-wrapper {
+  grid-column: 3;
+  grid-row: 1 / span 1;
+  width: 90%;
+  height: 40%;
+}
+
+section.container .title h1 {
+  font-size: 4.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+  width: 100%;
+}
+section.container .text-wrapper p {
+  text-align: left;
+  padding-bottom: 1rem;
+  padding-left: 0.5;
+  font-weight: 100;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  width: 75%;
+  color: rgb(117, 114, 114);
+}
+section.container .text-wrapper span {
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  background: tomato;
+}
+section.container .card-wrapper {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  display: flex;
+}
+section.container .card-wrapper .card {
+  background: #fff;
+  width: 230px;
+  height: 300px;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 25px;
+  box-shadow: 0 5px 40px rgb(0 0 0 / 0.2);
+  overflow: hidden;
+}
+.card-wrapper .card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.card-wrapper .card span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  nav {
+    margin-top: 60px;
+    width: 100%;
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+  nav .branding h2 {
+    max-width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: hidden;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+  }
+  .fas {
+    color: tomato;
+    transform: scale(-1, 1);
+    display: inline-block;
+    font-size: 1.9rem;
+  }
+
+  .hamberger {
+    display: inline-block;
+  }
+  .hamberger span {
+    display: block;
+    width: 45px;
+    height: 4px;
+    margin: 10px;
+    background: tomato;
+  }
+  .hamberger span:nth-child(1) {
+    width: 30px;
+  }
+  .hamberger span:nth-child(3) {
+    width: 40px;
+  }
+  .navlist {
+    display: none;
+    text-align: center;
+  }
+  .show {
+    display: block;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navlist li {
+    margin: 3rem;
+    display: block;
+  }
+  .navlist li:hover a {
+    text-decoration: line-through tomato 3px;
+  }
+  nav button {
+    display: none;
+  }
+
+  section.container {
+    display: grid;
+    margin-top: 100px;
+    margin: auto;
+    gap: 20px;
+    width: 100%;
+  }
+  section.container .title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: 1.8rem;
+  }
+  section.container .text-wrapper {
+    grid-column: 1;
+    grid-row: 3 / span 3;
+    border-color: red;
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 1rem;
+  }
+
+  section.container .title h1 {
+    font-size: 2rem;
+    line-height: 2;
+    font-weight: 700;
+    width: 90%;
+  }
+  section.container .text-wrapper p {
+    text-align: left;
+    padding-bottom: 1rem;
+    padding-left: 0.5;
+    font-weight: 200;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    width: 75%;
+    color: rgb(117, 114, 114);
+  }
+  section.container .text-wrapper span {
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    background: tomato;
+  }
+  section.container .card-wrapper {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+  section.container .card-wrapper .card {
+    background: #fff;
+    width: 42%;
+    height: 230px;
+    margin: 0.7rem;
+  }
+  .card-wrapper .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  .card-wrapper .card span {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}
